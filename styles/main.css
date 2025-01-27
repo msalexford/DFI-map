@@ -441,7 +441,19 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 0 40px; /* Match padding with timeline container */
-  font-family: "Roboto";
+}
+
+/* Inactive state */
+.year-label {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  color: #babbba;
+  transition: all 0.2s ease;
+}
+
+/* Active year label style */
+.year-label-active {
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
@@ -455,6 +467,35 @@ body {
   width: 1px;
   height: 20px;
   opacity: 0;
+}
+
+/* Thumb container and label styling */
+.thumb-container {
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.custom-thumb {
+  width: 16px;
+  height: 16px;
+  background: #6b6f6d;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(-50%);
+}
+
+.thumb-label {
+  position: absolute;
+  top: 27px; /* Adjust this value to control distance from thumb */
+  white-space: nowrap;
+  text-align: center;
 }
 
 .timeline-slider::-webkit-slider-runnable-track {
@@ -528,7 +569,19 @@ body {
 
   .year-labels {
     padding: 0 12px;
-    font-size: 16px;
+  }
+
+  .year-label-active {
+    font-size: 14px;
+  }
+
+  .year-label {
+    font-size: 11px;
+  }
+
+  .thumb-label {
+    font-size: 14px;
+    top: 10px;
   }
 }
 

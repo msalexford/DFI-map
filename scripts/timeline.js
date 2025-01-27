@@ -1,5 +1,4 @@
-// scripts/timeline.js
-
+// Modified initializeTimeline function
 function initializeTimeline(startYear, endYear, yearCallback) {
   const container = d3.select("#timeline");
   container.html("");
@@ -21,7 +20,18 @@ function initializeTimeline(startYear, endYear, yearCallback) {
     .append("div")
     .attr("class", "timeline-track");
 
-  const customThumb = timelineTrack.append("div").attr("class", "custom-thumb");
+  // Add thumb with year label
+  const thumbContainer = timelineTrack
+    .append("div")
+    .attr("class", "thumb-container");
+
+  const customThumb = thumbContainer
+    .append("div")
+    .attr("class", "custom-thumb");
+
+  const thumbLabel = thumbContainer
+    .append("div")
+    .attr("class", "thumb-label year-label-active");
 
   const timeline = timelineTrack
     .append("input")
@@ -53,10 +63,18 @@ function initializeTimeline(startYear, endYear, yearCallback) {
       '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-refresh-cw"><polyline points="23 4 23 10 17 10"></polyline><polyline points="1 20 1 14 7 14"></polyline><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>'
     );
 
-  // Year labels
+  // Year labels at ends
   const yearLabels = container.append("div").attr("class", "year-labels");
-  yearLabels.append("span").text(startYear);
-  yearLabels.append("span").text(endYear);
+  yearLabels
+    .append("span")
+    .attr("class", "year-label")
+    .attr("data-year", startYear)
+    .text(startYear);
+  yearLabels
+    .append("span")
+    .attr("class", "year-label")
+    .attr("data-year", endYear)
+    .text(endYear);
 
   let isPlaying = false;
   let interval;
@@ -67,12 +85,32 @@ function initializeTimeline(startYear, endYear, yearCallback) {
     });
   }
 
+  function updateYearLabels(selectedYear) {
+    // Update end labels
+    d3.selectAll(".year-label")
+      .classed("year-label-active", function () {
+        return parseInt(d3.select(this).attr("data-year")) === selectedYear;
+      })
+      .classed("year-label-inactive", function () {
+        return parseInt(d3.select(this).attr("data-year")) !== selectedYear;
+      });
+
+    // Only show thumb label if we're not at the ends
+    const isEndYear = selectedYear === startYear || selectedYear === endYear;
+    thumbLabel.style("opacity", isEndYear ? "0" : "1");
+
+    if (!isEndYear) {
+      thumbLabel.text(selectedYear);
+    }
+  }
+
   function updateYear(year) {
     console.log("Timeline updating year to:", year);
     timeline.property("value", year);
     updateDots(year);
+    updateYearLabels(year);
     const percentage = ((year - startYear) / (endYear - startYear)) * 100;
-    customThumb.style("left", `${percentage}%`);
+    thumbContainer.style("left", `${percentage}%`);
 
     // Call the provided callback
     if (yearCallback) {
