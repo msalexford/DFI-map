@@ -1,0 +1,46 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Impact Dashboard</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+</head>
+
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <h1>A decade's worth of impact</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+        </div>
+
+        <div class="metrics"></div>
+        <div class="map-container" id="map"></div>
+        <div class="timeline" id="timeline">
+        </div>
+    </div>
+
+    <!-- Lodash -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash/4.17.21/lodash.min.js"></script>
+    <!-- D3 and TopoJSON -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <!-- PapaParse for CSV -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+
+    <!-- Then your scripts -->
+    <script src="scripts/data.js"></script>
+    <script src="scripts/metrics.js"></script>
+    <script src="scripts/legend.js" defer></script>
+    <script src="scripts/map.js" defer></script>
+    <script src="scripts/timeline.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+
+</html>

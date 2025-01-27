@@ -1,0 +1,97 @@
+/* styles/fonts.css */
+
+/* #region - Gilroy */
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-RegularItalic.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("/fonts/Gilroy-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* #endregion */
+
+/* #region - URW Gothic */
+
+/* Book (Regular) */
+@font-face {
+  font-family: "URW Gothic";
+  src: url("/fonts/URWGothic-Book.ttf") format("truetype"),
+    url("/fonts/URWGothic-Book.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Book Oblique (Regular Italic) */
+@font-face {
+  font-family: "URW Gothic";
+  src: url("/fonts/URWGothic-BookOblique.ttf") format("truetype"),
+    url("/fonts/URWGothic-BookOblique.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Demi (Semi-Bold) */
+@font-face {
+  font-family: "URW Gothic";
+  src: url("/fonts/URWGothic-Demi.ttf") format("truetype"),
+    url("/fonts/URWGothic-Demi.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Demi Oblique (Semi-Bold Italic) */
+@font-face {
+  font-family: "URW Gothic";
+  src: url("/fonts/URWGothic-DemiOblique.ttf") format("truetype"),
+    url("/fonts/URWGothic-DemiOblique.otf") format("opentype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* #endregion */
