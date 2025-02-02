@@ -4,26 +4,26 @@
 
 /* Gilroy Font Classes */
 .gilroy {
-  font-family: "Gilroy", sans-serif;
+  font-family: 'Gilroy', sans-serif;
 }
 
 .gilroy-light {
-  font-family: "Gilroy", sans-serif;
+  font-family: 'Gilroy', sans-serif;
   font-weight: 300;
 }
 
 .gilroy-regular {
-  font-family: "Gilroy", sans-serif;
+  font-family: 'Gilroy', sans-serif;
   font-weight: 400;
 }
 
 .gilroy-medium {
-  font-family: "Gilroy", sans-serif;
+  font-family: 'Gilroy', sans-serif;
   font-weight: 500;
 }
 
 .gilroy-bold {
-  font-family: "Gilroy", sans-serif;
+  font-family: 'Gilroy', sans-serif;
   font-weight: 700;
 }
 
@@ -34,16 +34,16 @@
 
 /* URW Gothic Font Classes */
 .gothic {
-  font-family: "URW Gothic", sans-serif;
+  font-family: 'URW Gothic', sans-serif;
 }
 
 .gothic-book {
-  font-family: "URW Gothic", sans-serif;
+  font-family: 'URW Gothic', sans-serif;
   font-weight: 400;
 }
 
 .gothic-demi {
-  font-family: "URW Gothic", sans-serif;
+  font-family: 'URW Gothic', sans-serif;
   font-weight: 600;
 }
 
@@ -89,7 +89,7 @@
 }
 
 body {
-  font-family: "Gilroy", sans-serif;
+  font-family: 'Gilroy', sans-serif;
   padding: 20px;
   max-width: 1000px;
 }
@@ -111,14 +111,16 @@ body {
 /* Title */
 .header h1 {
   margin-bottom: 0.5rem;
-  font-family: "Gilroy", sans-serif;
+  font-family: 'Gilroy', sans-serif;
   font-weight: 700;
 }
 
 /* Description */
 .header p {
-  font-family: "URW Gothic", sans-serif;
+  font-family: 'URW Gothic', sans-serif;
   font-weight: 400;
+  line-height: 22px;
+  font-size: 14px;
 }
 
 /* #endregion */
@@ -169,7 +171,7 @@ body {
 }
 
 .metric-value {
-  font-family: "Gilroy", sans-serif;
+  font-family: 'Gilroy', sans-serif;
   font-weight: 500;
   font-size: 24px;
   font-weight: bold;
@@ -307,7 +309,7 @@ body {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   margin-bottom: 8px;
-  font-family: "Gilroy", sans-serif;
+  font-family: 'Gilroy', sans-serif;
   font-weight: 700;
 }
 
@@ -315,7 +317,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  font-family: "Gilroy", sans-serif;
+  font-family: 'Gilroy', sans-serif;
   font-weight: 400;
 }
 
@@ -445,7 +447,7 @@ body {
 
 /* Inactive state */
 .year-label {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 12px;
   color: #babbba;
   transition: all 0.2s ease;
@@ -453,7 +455,7 @@ body {
 
 /* Active year label style */
 .year-label-active {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
