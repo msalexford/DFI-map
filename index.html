@@ -45,13 +45,24 @@
     <!-- PapaParse for CSV -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 
-    <!-- Then your scripts -->
+    <!-- Scripts -->
     <script src="scripts/data.js"></script>
     <script src="scripts/metrics.js"></script>
     <script src="scripts/legend.js" defer></script>
     <script src="scripts/map.js" defer></script>
     <script src="scripts/timeline.js"></script>
     <script src="scripts/main.js"></script>
+
+    <!-- Resize observer -->
+    <script>
+        const ro = new ResizeObserver(entries => {
+            const height = entries[0].contentRect.height;
+            window.parent.postMessage({ height: height }, '*');
+        });
+
+        // Observe the dashboard div instead of body for more precise sizing
+        ro.observe(document.querySelector('.dashboard'));
+    </script>
 </body>
 
 </html>
