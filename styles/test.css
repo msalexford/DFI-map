@@ -1,0 +1,62 @@
+/* Gilroy Font Classes */
+.gilroy {
+  font-family: 'Gilroy', sans-serif;
+}
+
+.gilroy-light {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 300;
+}
+
+.gilroy-regular {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 400;
+}
+
+.gilroy-medium {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 500;
+}
+
+.gilroy-bold {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 700;
+}
+
+/* Font style modifiers for Gilroy */
+.gilroy-italic {
+  font-style: italic;
+}
+
+/* URW Gothic Font Classes */
+.gothic {
+  font-family: 'URW Gothic', sans-serif;
+}
+
+.gothic-book {
+  font-family: 'URW Gothic', sans-serif;
+  font-weight: 400;
+}
+
+.gothic-demi {
+  font-family: 'URW Gothic', sans-serif;
+  font-weight: 600;
+}
+
+/* Font style modifiers for Gothic */
+.gothic-oblique {
+  font-style: italic;
+}
+
+/* #endregion */
+
+/* #region - Specific fonts */
+
+/* Open Sans */
+
+.open-sans {
+  font-family: 'Open Sans', serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
+}
