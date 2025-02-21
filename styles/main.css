@@ -29,10 +29,10 @@
   --color-text-disabled: var(--neutral-400);
 
   /* Font Families */
-  --font-primary: 'Gilroy', sans-serif;
-  --font-secondary: 'URW Gothic', sans-serif;
-  --font-body: 'Open Sans', serif;
-  --font-mono: 'Roboto', sans-serif;
+  --font-primary: "Gilroy", sans-serif;
+  --font-secondary: "URW Gothic", sans-serif;
+  --font-body: "Open Sans", serif;
+  --font-mono: "Roboto", sans-serif;
 
   /* Font Weights */
   --font-weight-light: 300;
@@ -127,10 +127,10 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-areas:
-    'header'
-    'metrics'
-    'map'
-    'timeline';
+    "header"
+    "metrics"
+    "map"
+    "timeline";
   gap: 1.5rem;
   padding: 1.5rem;
 }
@@ -156,10 +156,10 @@ body {
 @media (max-width: 768px) {
   .dashboard {
     grid-template-areas:
-      'header'
-      'map'
-      'timeline'
-      'metrics';
+      "header"
+      "map"
+      "timeline"
+      "metrics";
     gap: 0.5rem;
     padding: 0.5rem;
   }
@@ -203,8 +203,8 @@ body {
 
 /* Description */
 .header p {
-  font-family: var(--font-body);
-  font-weight: var(--font-weight-regular);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-light);
   line-height: 22px;
   font-size: 1rem;
 }
@@ -818,9 +818,7 @@ body {
   font-size: 14px;
   opacity: 0;
   visibility: hidden;
-  transition:
-    opacity 0.2s,
-    visibility 0.2s;
+  transition: opacity 0.2s, visibility 0.2s;
   z-index: 10;
 }
 
