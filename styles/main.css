@@ -63,34 +63,34 @@
 /* #region - Common font sizing */
 
 .text-sm {
-  font-size: 0.875rem; /* 14px */
+  font-size: var(--text-sm);
   line-height: 1.25rem;
 }
 
 .text-base {
-  font-size: 1rem; /* 16px */
+  font-size: var(--text-base);
   line-height: 1.5rem;
 }
 
 .text-lg {
-  font-size: 1.125rem; /* 18px */
+  font-size: var(--text-lg);
   line-height: 1.75rem;
 }
 
 @media (max-width: 768px) {
   .text-lg {
-    font-size: 1rem; /* 16px on mobile */
+    font-size: var(--text-base); /* 16px on mobile */
     line-height: 1.5rem;
   }
 }
 
 .text-xl {
-  font-size: 1.25rem; /* 20px */
+  font-size: var(--text-xl);
   line-height: 1.75rem;
 }
 
 .text-2xl {
-  font-size: 1.5rem; /* 24px */
+  font-size: var(--text-2xl);
   line-height: 2rem;
 }
 
@@ -106,12 +106,12 @@
 
 /* Set the root size to 16px by default */
 html {
-  font-size: 16px; /* Default base size */
+  font-size: var(--text-base); /* Default base size */
 }
 
 @media (max-width: 768px) {
   html {
-    font-size: 14px; /* Smaller base size for mobile */
+    font-size: var(--text-sm); /* Smaller base size for mobile */
   }
 }
 
@@ -139,15 +139,12 @@ body {
 .header {
   grid-area: header;
 }
-
 .metrics {
   grid-area: metrics;
 }
-
 .map-container {
   grid-area: map;
 }
-
 .timeline {
   grid-area: timeline;
 }
@@ -198,7 +195,7 @@ body {
   margin-bottom: 0.5rem;
   font-family: var(--font-primary);
   font-weight: var(--font-weight-bold);
-  font-size: 2rem;
+  font-size: var(--text-3xl);
 }
 
 /* Description */
@@ -206,7 +203,7 @@ body {
   font-family: var(--font-primary);
   font-weight: var(--font-weight-light);
   line-height: 22px;
-  font-size: 1rem;
+  font-size: var(--text-base);
 }
 
 @media (max-width: 768px) {
@@ -406,7 +403,7 @@ body {
     margin: 0;
   }
 }
-
+/* Mobile styles */
 @media (max-width: 768px) {
   .legend-container {
     position: relative;
@@ -448,17 +445,17 @@ body {
 
 .legend-title {
   font-weight: var(--font-weight-semibold);
-  font-size: 0.9rem;
+  font-size: calc(var(--text-xs) + 0.05rem);
   letter-spacing: 0.5px;
   text-transform: uppercase;
   margin-bottom: 4px;
   font-family: var(--font-primary);
   color: var(--color-text-secondary);
 }
-
+/* Mobile styles */
 @media (max-width: 768px) {
   .legend-title {
-    font-size: 14px;
+    font-size: calc(var(--text-xs) + 0.05rem);
   }
 }
 
@@ -471,7 +468,7 @@ body {
 }
 
 .legend-label {
-  font-size: 0.85rem;
+  font-size: calc(var(--text-xs) + 0.1rem);
   color: var(--color-text-secondary);
   flex: 1;
   flex-grow: 1;
@@ -482,7 +479,7 @@ body {
 
 @media (max-width: 768px) {
   .legend-label {
-    font-size: 13px;
+    font-size: var(--text-xs); /* 0.75rem or 12px */
     text-align: center;
   }
 }
@@ -595,7 +592,7 @@ body {
 /* Inactive state */
 .year-label {
   font-family: var(--font-mono);
-  font-size: 16px;
+  font-size: var(--text-base);
   color: var(--color-text-disabled);
   transition: all 0.2s ease;
 }
@@ -610,9 +607,10 @@ body {
   color: var(--neutral-700);
 }
 
+/* Mobile styles */
 @media (max-width: 768px) {
   .year-label {
-    font-size: 1.125rem;
+    font-size: var(--text-lg);
     position: relative; /* Reset position for mobile */
     transform: none; /* Reset transform */
   }
@@ -622,7 +620,7 @@ body {
   }
 
   .year-label-active {
-    font-size: 1.125rem;
+    font-size: var(--text-lg);
   }
 }
 
@@ -761,7 +759,7 @@ body {
 }
 
 .metric-value {
-  font-size: 2.25rem;
+  font-size: var(--text-4xl);
   font-weight: var(--font-weight-regular);
   color: var(--color-text-primary);
   line-height: 1;
@@ -779,8 +777,8 @@ body {
 }
 
 .label-text {
-  font-family: var(--font-mono);
-  font-size: 1rem;
+  font-family: var(--font-primary);
+  font-size: var(--text-base);
   color: var(--color-text-secondary);
   font-weight: var(--font-weight-regular);
 }
@@ -863,11 +861,11 @@ body {
   }
 
   .metric-value {
-    font-size: 2.125rem;
+    font-size: var(--text-4xl);
   }
 
   .label-text {
-    font-size: 1rem;
+    font-size: var(--text-base);
     font-weight: var(--font-weight-medium);
   }
 }
@@ -875,7 +873,7 @@ body {
 .mobile-tooltip {
   display: none;
   font-family: var(--font-mono);
-  font-size: 0.875rem;
+  font-size: var(--text-sm);
   color: var(--color-text-disabled);
   margin-top: 0.5rem;
   line-height: 1.3;
