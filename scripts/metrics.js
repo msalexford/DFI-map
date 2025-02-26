@@ -10,27 +10,31 @@ function initializeMetrics(currentData, previousData) {
   // Define metrics with their tooltips
   const metrics = [
     {
-      label: "Leaders Supported",
+      label: window.headerContent?.metric_leaders_label || "Leaders Supported",
       value: currentData["total-leaders"],
       tooltip:
+        window.headerContent?.metric_leaders_tooltip ||
         "Cumulative number of leaders of educator-preparation programs we've supported through our leadership programming.",
     },
     {
-      label: "EPPs Served",
+      label: window.headerContent?.metric_epps_label || "EPPs Served",
       value: currentData["total-epps"],
       tooltip:
+        window.headerContent?.metric_epps_tooltip ||
         "Cumulative number of educator-preparation programs we've served through our programming.",
     },
     {
-      label: "States Reached",
+      label: window.headerContent?.metric_states_label || "States Reached",
       value: currentData["total-states-active"],
       tooltip:
+        window.headerContent?.metric_states_tooltip ||
         "Cumulative number of states where we've supported leaders, served programs, and/or engaged in advocacy efforts.",
     },
     {
-      label: "Teachers Impacted",
+      label: window.headerContent?.metric_teachers_label || "Teachers Impacted",
       value: currentData["total-teachers"],
       tooltip:
+        window.headerContent?.metric_teachers_tooltip ||
         "Cumulative number of current teachers we've impacted through our comprehensive support of the educator-preparation programs where they were enrolled.",
     },
   ];
@@ -48,7 +52,7 @@ function initializeMetrics(currentData, previousData) {
     const tooltipContainer = document.createElement("div");
     tooltipContainer.className = "tooltip-container desktop-only";
     tooltipContainer.innerHTML = `
-      <div class="tooltip-icon">i</div>
+      <div class="tooltip-icon">?</div>
       <div class="tooltip-content">${metric.tooltip}</div>
     `;
 
@@ -61,7 +65,6 @@ function initializeMetrics(currentData, previousData) {
         <div class="label-text">${metric.label}</div>
       </div>
         <div class="mobile-tooltip">${metric.tooltip}</div>
-
     `;
 
     // Insert tooltip after the metric label

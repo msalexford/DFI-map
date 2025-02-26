@@ -506,6 +506,7 @@ body {
   width: 100%;
   /* padding: 1rem; */
   margin: 20px 0;
+  padding-bottom: 30px;
 }
 
 .timeline-container {
@@ -573,12 +574,17 @@ body {
 }
 
 .year-labels {
-  display: flex;
-  justify-content: space-between;
   padding: 0; /* Remove the padding */
-  width: calc(100% - 64px); /* Subtract the width of play/replay buttons */
-  margin: 0 auto; /* Center the container */
-  position: relative; /* For absolute positioning of spans */
+
+  display: flex !important;
+  justify-content: space-between !important;
+  width: calc(
+    100% - 64px
+  ) !important; /* Subtract the width of play/replay buttons */
+  margin: 0 auto !important; /* Center the container */
+  visibility: visible !important;
+  position: relative !important; /* For absolute positioning of spans */
+  z-index: 10 !important;
 }
 
 @media (max-width: 768px) {
@@ -595,6 +601,10 @@ body {
   font-size: var(--text-base);
   color: var(--color-text-disabled);
   transition: all 0.2s ease;
+
+  visibility: visible !important;
+  display: inline-block !important;
+  opacity: 1 !important;
 }
 
 /* Active year label style */
