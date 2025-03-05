@@ -74,4 +74,42 @@ function initializeMetrics(currentData, previousData) {
     // Add completed metric card to metrics container
     metricsContainer.appendChild(card);
   });
+
+  // Call this once after all metrics cards are created
+  adjustTooltipPosition();
+}
+
+// Add this at the end of metrics.js after your initializeMetrics function
+function adjustTooltipPosition() {
+  const tooltips = document.querySelectorAll(".tooltip-container");
+
+  tooltips.forEach((tooltip) => {
+    tooltip.addEventListener("mouseenter", () => {
+      const content = tooltip.querySelector(".tooltip-content");
+      if (!content) return;
+
+      // Get tooltip dimensions and position
+      const rect = content.getBoundingClientRect();
+      const iframe = window.frameElement;
+
+      // If we're in an iframe and tooltip would be cut off
+      if (iframe) {
+        const iframeRect = iframe.getBoundingClientRect();
+
+        // Check if tooltip would extend beyond iframe bounds
+        if (rect.right > iframeRect.right) {
+          // Adjust positioning to keep it visible
+          content.style.left = "auto";
+          content.style.right = "0";
+          content.style.transform = "none";
+        }
+
+        if (rect.left < iframeRect.left) {
+          content.style.left = "0";
+          content.style.right = "auto";
+          content.style.transform = "none";
+        }
+      }
+    });
+  });
 }
