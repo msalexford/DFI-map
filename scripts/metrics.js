@@ -1,7 +1,7 @@
 // metrics.js
 function initializeMetrics(currentData, previousData) {
   // Log input data for debugging purposes
-  console.log("Initialize Metrics called with:", { currentData, previousData });
+  // console.log("Initialize Metrics called with:", { currentData, previousData });
 
   // Get reference to metrics container element and clear any existing content
   const metricsContainer = document.querySelector(".metrics");
@@ -40,7 +40,7 @@ function initializeMetrics(currentData, previousData) {
   ];
 
   // Log processed metrics for debugging
-  console.log("Processed metrics:", metrics);
+  // console.log("Processed metrics:", metrics);
 
   // Create and append DOM elements for each metric
   metrics.forEach((metric) => {
@@ -52,7 +52,7 @@ function initializeMetrics(currentData, previousData) {
     const tooltipContainer = document.createElement("div");
     tooltipContainer.className = "tooltip-container desktop-only";
     tooltipContainer.innerHTML = `
-      <div class="tooltip-icon">?</div>
+      <div class="tooltip-icon">i</div>
       <div class="tooltip-content">${metric.tooltip}</div>
     `;
 
